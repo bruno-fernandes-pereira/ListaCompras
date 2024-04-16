@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState, FormEvent } from 'react'
 import { v4 } from 'uuid'
-import { AddButton, DeleteAllButton, TrashButton, Container, ContainerItem } from './styles'
+import { StandardButton, TrashButton, Container, ContainerItem } from './styles'
 
 // React Hooks
 // useRef
@@ -49,8 +49,8 @@ function Home() {
     <Container>
       <h1>Lista de Compras</h1>
       <input placeholder="Digite o produto" ref={inputRef} />
-      <AddButton onClick={adicionar}>Adicionar</AddButton>
-      <DeleteAllButton onClick={deletarTodos}>Deletar Todos</DeleteAllButton>
+      <StandardButton bgColor="#57c200" onClick={adicionar}>Adicionar</StandardButton>
+      <StandardButton bgColor="#ec2f00" onClick={deletarTodos}>Deletar Todos</StandardButton>
 
       {produtos.map((produto) => (
         <ContainerItem key={produto.id}>

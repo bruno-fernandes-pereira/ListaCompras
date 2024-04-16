@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+import { theme } from '../../theme'
 
-export const AddButton = styled.button`
-    background: #53b900;
+export const StandardButton = styled.button`
+    /* background: #53b900; */
+    background: ${(prop) => prop.bgColor};
     color: #222222;
     height: 35px;
     padding: 5px 10px;
@@ -9,23 +11,7 @@ export const AddButton = styled.button`
     border: none;
     border-radius: 5px;
     margin-left: 5px;
-    transition: all 0.5s;
-    
-    &:hover {
-        /* font-weight: 600; */
-        opacity: 0.8;
-    }
-`
-
-export const DeleteAllButton = styled.button`
-    background: #ec2f00;
-    color: #222222;
-    height: 35px;
-    padding: 5px 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    margin-left: 5px;
+    box-shadow: ${({theme}) => theme.boxShadow.standard};
     transition: all 0.5s;
     
     &:hover {
@@ -48,7 +34,7 @@ export const TrashButton = styled.button`
 `
 
 export const Container = styled.div`
-    background: #009e91;
+    /* background: #009e91; */
     padding: 20px;
     border-radius: 10px;
     margin-top: 30px;
@@ -65,6 +51,7 @@ export const Container = styled.div`
         margin-top: 20px;
         outline: none;
         padding-left: 10px;
+        box-shadow: ${({theme}) => theme.boxShadow.standard};
     }
 `
 
